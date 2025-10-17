@@ -1,0 +1,23 @@
+[project]
+name = "Football-Analysis-System"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "comet-ml>=3.52.1",
+    "dotenv>=0.9.9",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.3.3",
+    "roboflow>=1.2.11",
+    "scikit-learn>=1.7.2",
+    "supervision>=0.26.1",
+    "ultralytics>=8.3.195",
+]
+
+[[tool.mypy.overrides]]
+module = ["untyped_package.*"]
+follow_untyped_imports = true
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
